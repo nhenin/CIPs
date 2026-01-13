@@ -1431,11 +1431,7 @@ $\log_{10}(5 \cdot 10^{-10} \cdot 2^{48} + 7.16 \cdot 10^{-2} \cdot \frac{2^{49}
 
 **Step 2: Compute the Estimated Cost in USD**
 
-The cost is calculated as:
-
-<div align="center">
-$ \text{Cost (USD)} = N_{\text{CPU}} \times \text{cost per CPU-hour} \times \text{runtime in hours}$
-</div>
+The cost is calculated as $\text{Cost (USD)} = N_{\text{CPU}} \times \text{cost per CPU-hour} \times \text{runtime in hours}$
 
 - **Cost per CPU-hour**: $0.01\,\text{USD}$,
 - **Runtime**: $w_O = 20 \times (2\rho - 1)$ seconds, with $\rho=50$:
