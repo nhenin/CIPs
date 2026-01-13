@@ -719,25 +719,32 @@ Accumulating a significant number of leader slots at this position necessitates,
 
 Below is a non-exhaustive list of potential attack vectors, ranging from minor disruptions in system throughput to severe breaches that compromise the protocol’s integrity and structure.
 
-<span style="display:block; font-size:1.1em; font-weight:bold">Economic Exploitation</span>
+**Economic Exploitation**
+
 Manipulating slot leader distributions to prioritize transactions that benefit the adversary or to extract higher fees.
 
-<span style="display:block; font-size:1.1em; font-weight:bold">Censorship Attacks</span>
+**Censorship Attacks**
+
 Selectively excluding transactions from specific stakeholders to suppress competition or dissent.
 
-<span style="display:block; font-size:1.1em; font-weight:bold">Minority Stake Exploitation</span>
+**Minority Stake Exploitation**
+
 Amplifying the influence of a small adversarial stake by targeting specific epoch transitions.
 
-<span style="display:block; font-size:1.1em; font-weight:bold">Fork Manipulation</span>
+**Fork Manipulation**
+
 Creating and maintaining malicious forks to destabilize consensus or execute double-spend attacks.
 
-<span style="display:block; font-size:1.1em; font-weight:bold">Settlement Delays</span>
+**Settlement Delays**
+
 Strategically delaying block confirmation to undermine trust in the protocol's settlement guarantees.
 
-<span style="display:block; font-size:1.1em; font-weight:bold">Double-Spend Attacks</span>
+**Double-Spend Attacks**
+
 Exploiting control over slot leader distributions to reverse confirmed transactions and execute double-spends.
 
-<span style="display:block; font-size:1.1em; font-weight:bold">Chain-Freezing Attacks</span>
+**Chain-Freezing Attacks**
+
 Using nonce selection to stall block production entirely, halting the protocol and causing network paralysis.
 
 ### 2.2. Non-Exhaustive Manipulation Stategy List
@@ -982,10 +989,11 @@ To estimate the cost of these **entry tickets**, we address the following questi
 > - **Observing historical adversarial behaviors**, particularly in decentralized networks with shifting governance dynamics.  
 > - **Giving the Cardano community sufficient time** to introduce fundamental **protocol-level improvements** to Ouroboros that could **completely mitigate or transform this issue**.  
 
-<span style="display:block; font-size:1.05em; font-weight:bold">The Data</span>
+**The Data**
+
 We are computing here the expected number of grinding attempts for both the self-mixing and forking strategies.
 
-<span style="display:block; font-size:1.0em; font-weight:bold">Self-Mixing</span>
+**Self-Mixing**
 
 We present here the average number of years required for an adversary with a stake of $\text{stake}_A$ to control N blocks. We chose to emphasize frequencies below 10 years, as it is reasonable to assume the protocol will have evolved after such a period.
 
@@ -1021,8 +1029,9 @@ We present the expected number (i.e., moment) of grinding attempts during self-m
 | $\mathbb{E}(X_A)$    |   0.005   |   0.010   |   0.020   |   0.053   |   0.111   |   0.250   |   0.333   |   0.429   |   0.493   |   0.667   |   0.818   |   0.961   |
 
 We conclude that the self-mixing attack is neither highly probable nor particularly critical.
+<br>
 
-<span style="display:block; font-size:1.0em; font-weight:bold">Forking</span>
+**Forking**
 
 We extend here the self-mixing strategy with forking and show how this renders the attack viable. 
 
@@ -1091,7 +1100,7 @@ The details of the calculations underlying this table can be found in the follow
 
 For example, with **5% adversarial stake**, it would take about **1800 years** in average for an adversary to obtain an advantage of of exactly 4 blocks at the critical juncture.
 
-<span style="display:block; font-size:1.05em; font-weight:bold">The Results</span>
+**The Results**
 
 <div align="center">
 <img src="./image/grinding_depth_comparison.png" alt="" />
@@ -1176,7 +1185,7 @@ After simulating the leader election distribution, the adversary must determine 
 2. **Estimating adversarial control over leader election.**  
 3. **Comparing multiple nonces** to select the most effective one.  
 
-<span style="display:block; font-size:1.05em; font-weight:bold">Nature of the Computational Workload</span>
+**Nature of the Computational Workload**
 
 Unlike previous steps, this phase does not perform a single deterministic computation but operates as an **evaluation loop over a dataset of adversarial leader election scenarios**. The attacker’s dataset includes:  
 
@@ -1195,7 +1204,7 @@ The total grinding time is the sum of:
 2. **Slot Leader Simulation ($T_{\text{distribution}}$)** → Eligibility checks over $w_T$.  
 3. **Strategic Evaluation ($T_{\text{eval}}$)** → Nonce selection analysis.  
 
-<span style="display:block; font-size:1.05em; font-weight:bold">Total Grinding Time Formula</span>
+**Total Grinding Time Formula**
 
 ```math
 T_{\text{grinding}} = T_{\text{nonce}} + T_{\text{distribution}} + T_{\text{eval}}
