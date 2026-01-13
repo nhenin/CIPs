@@ -1419,7 +1419,7 @@ $N_{\text{CPU}} \geq 5 \cdot 10^{-10} \cdot 2^{\rho-2} + 7.16 \cdot 10^{-2} \cdo
 For $\rho=50$, the expression becomes:
 
 <div align="center">
-$N_{\text{CPU}} &\geq 5 \cdot 10^{-10} \cdot 2^{48} + 7.16 \cdot 10^{-2} \cdot \frac{2^{49}}{50} \geq 8.06 \cdot 10^{11}$
+$N_{\text{CPU}} \geq 5 \cdot 10^{-10} \cdot 2^{48} + 7.16 \cdot 10^{-2} \cdot \frac{2^{49}}{50} \geq 8.06 \cdot 10^{11}$
 </div>
 
 In $\log_{10}$ scale:
@@ -1427,13 +1427,14 @@ In $\log_{10}$ scale:
 <div align="center">
 $\log_{10}(5 \cdot 10^{-10} \cdot 2^{48} + 7.16 \cdot 10^{-2} \cdot \frac{2^{49}}{50}) \approx 11.906$
 </div>
+<br>
 
 **Step 2: Compute the Estimated Cost in USD**
 
 The cost is calculated as:
 
 <div align="center">
-$\text{Cost (USD)} = N_{\text{CPU}} \times \text{cost per CPU-hour} \times \text{runtime in hours}$
+$ \text{Cost (USD)} = N_{\text{CPU}} \times \text{cost per CPU-hour} \times \text{runtime in hours}$
 </div>
 
 - **Cost per CPU-hour**: $0.01\,\text{USD}$,
@@ -1446,6 +1447,7 @@ $w_O = 20 \times (2 \cdot 50 - 1) = 1,980 \, \text{seconds}, \quad \text{runtime
 <div align="center">
 $\text{Cost (USD)} = 8.06 \times 10^{11} \times 0.01 \times 0.55 \approx 4.43 \times 10^9 \approx 4.43 \, \text{billion}$
 </div>
+<br>
 
 **Step 3: Determine Feasibility**
 
