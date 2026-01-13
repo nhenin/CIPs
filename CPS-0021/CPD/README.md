@@ -1412,18 +1412,16 @@ Let’s walk through the calculation for the Owl Survey scenario at $\rho=50$ to
 
 The formula for $N_{\text{CPU}}$ in the Owl Survey scenario, as given in [Section 3.5 - Scenarios](#35-scenarios), is:
 
-$`N_{\text{CPU}} \geq 5 \cdot 10^{-10} \cdot 2^{\rho-2} + 7.16 \cdot 10^{-2} \cdot \frac{2^{\rho-1}}{\rho}`$
+<center>$`N_{\text{CPU}} \geq 5 \cdot 10^{-10} \cdot 2^{\rho-2} + 7.16 \cdot 10^{-2} \cdot \frac{2^{\rho-1}}{\rho}`$</center>
 
 For $\rho=50$, the expression becomes:
 
-$`N_{\text{CPU}} &\geq 5 \cdot 10^{-10} \cdot 2^{48} + 7.16 \cdot 10^{-2} \cdot \frac{2^{49}}{50} &\geq 8.06 \cdot 10^{11}`$
+$'N_{\text{CPU}} &\geq 5 \cdot 10^{-10} \cdot 2^{48} + 7.16 \cdot 10^{-2} \cdot \frac{2^{49}}{50} \geq 8.06 \cdot 10^{11}`$
 
 
 In $\log_{10}$ scale:
 
-```math
-\log_{10}(5 \cdot 10^{-10} \cdot 2^{48} + 7.16 \cdot 10^{-2} \cdot \frac{2^{49}}{50}) \approx 11.906
-```
+$'\log_{10}(5 \cdot 10^{-10} \cdot 2^{48} + 7.16 \cdot 10^{-2} \cdot \frac{2^{49}}{50}) \approx 11.906 `$
 
 **Step 2: Compute the Estimated Cost in USD**
 
