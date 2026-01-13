@@ -1413,37 +1413,39 @@ Let’s walk through the calculation for the Owl Survey scenario at $\rho=50$ to
 The formula for $N_{\text{CPU}}$ in the Owl Survey scenario, as given in [Section 3.5 - Scenarios](#35-scenarios), is:
 
 <div align="center">
-$`N_{\text{CPU}} \geq 5 \cdot 10^{-10} \cdot 2^{\rho-2} + 7.16 \cdot 10^{-2} \cdot \frac{2^{\rho-1}}{\rho}`$
+$N_{\text{CPU}} \geq 5 \cdot 10^{-10} \cdot 2^{\rho-2} + 7.16 \cdot 10^{-2} \cdot \frac{2^{\rho-1}}{\rho}$
 </div>
 
 For $\rho=50$, the expression becomes:
 
 <div align="center">
-$`N_{\text{CPU}} \geq 5 \cdot 10^{-10} \cdot 2^{48} + 7.16 \cdot 10^{-2} \cdot \frac{2^{49}}{50} \geq 8.06 \cdot 10^{11}`$
-
+$N_{\text{CPU}} &\geq 5 \cdot 10^{-10} \cdot 2^{48} + 7.16 \cdot 10^{-2} \cdot \frac{2^{49}}{50} \geq 8.06 \cdot 10^{11}$
+</div>
 
 In $\log_{10}$ scale:
 
-$`\log_{10}(5 \cdot 10^{-10} \cdot 2^{48} + 7.16 \cdot 10^{-2} \cdot \frac{2^{49}}{50}) \approx 11.906`$
+<div align="center">
+$\log_{10}(5 \cdot 10^{-10} \cdot 2^{48} + 7.16 \cdot 10^{-2} \cdot \frac{2^{49}}{50}) \approx 11.906$
+</div>
 
 **Step 2: Compute the Estimated Cost in USD**
 
 The cost is calculated as:
 
-```math
-\text{Cost (USD)} = N_{\text{CPU}} \times \text{cost per CPU-hour} \times \text{runtime in hours}
-```
+<div align="center">
+$\text{Cost (USD)} = N_{\text{CPU}} \times \text{cost per CPU-hour} \times \text{runtime in hours}$
+</div>
 
 - **Cost per CPU-hour**: $0.01\,\text{USD}$,
 - **Runtime**: $w_O = 20 \times (2\rho - 1)$ seconds, with $\rho=50$:
 
-```math
-w_O = 20 \times (2 \cdot 50 - 1) = 1,980 \, \text{seconds}, \quad \text{runtime} = \frac{1,980}{3600} \approx 0.55 \, \text{hours}
-```
+<div align="center">
+$w_O = 20 \times (2 \cdot 50 - 1) = 1,980 \, \text{seconds}, \quad \text{runtime} = \frac{1,980}{3600} \approx 0.55 \, \text{hours}$
+</div>
 
-```math
-\text{Cost (USD)} = 8.06 \times 10^{11} \times 0.01 \times 0.55 \approx 4.43 \times 10^9 \approx 4.43 \, \text{billion}
-```
+<div align="center">
+$\text{Cost (USD)} = 8.06 \times 10^{11} \times 0.01 \times 0.55 \approx 4.43 \times 10^9 \approx 4.43 \, \text{billion}$
+</div>
 
 **Step 3: Determine Feasibility**
 
