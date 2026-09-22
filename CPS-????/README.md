@@ -1,6 +1,6 @@
 ---
 CPS: 37
-Title: Application and transaction-builder friction in the current minUTxO implementation
+Title: Application and transaction friction in minUTxO implementation
 Category: Ledger
 Status: Open
 Authors:
